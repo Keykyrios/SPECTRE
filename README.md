@@ -38,7 +38,7 @@ graph TD
     classDef ts fill:#000000,stroke:#333,stroke-width:1px,color:#fff;
     classDef ext fill:#222,stroke:#555,stroke-width:1px,color:#ccc;
 
-    A[Data Ingestion Node / ZeroMQ]:::ext -->|Raw Tx Payload| B(Python AsyncIO Router):::py
+    A[Data Ingestion Node / ZeroMQ]:::ext -->|Raw Tx Payload| B[Python AsyncIO Router]:::py
     
     subgraph CoreEngine [Spectre Native Engine]
         B -->|PyBind11 Buffer Protocol| C{C++ Detector Core}:::cpp
@@ -50,7 +50,7 @@ graph TD
     end
     
     C -->|Zero-Copy Struct Return| B
-    B -->|WebSocket Stream (JSON)| G(Next.js Presentation Layer):::ts
+    B -->|WebSocket Stream JSON| G[NextJS Presentation Layer]:::ts
     
     subgraph Dashboard [React Application]
         G -->|React Three Fiber| H[WebGL Topology View]:::ts
