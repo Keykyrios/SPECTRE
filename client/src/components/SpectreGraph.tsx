@@ -410,7 +410,7 @@ export default function SpectreGraph({ events, latestEvent, selectedTx, onSelect
         />
 
         {/* Post-Processing Effects */}
-        <EffectComposer disableNormalPass multisampling={4}>
+        <EffectComposer multisampling={4}>
           <Bloom
             luminanceThreshold={0.1}
             luminanceSmoothing={0.9}
